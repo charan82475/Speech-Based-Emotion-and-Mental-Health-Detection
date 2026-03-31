@@ -1,0 +1,87 @@
+Requirements and Execution Steps
+
+Project Title: Speech Based Emotion and Mental Health Detection
+
+System Requirements:-
+1) Python 3.8 or above
+2) PyTorch
+3) HuggingFace Transformers
+4) Flask
+5) NumPy, Pandas, Scikit-learn
+6) SQLite3
+7) Web Browser (Chrome/Edge)
+
+Project Files:-
+1) app.py → Main Flask application
+2) SDED_T_Final_Model.pt → Trained SDED-T model
+3) templates/ → HTML with CSS files (Home, Login, Register, Voice Detection)
+4) static/ →  JS files
+5) database.db → SQLite database for user authentication
+6) requirements.txt → Required libraries
+
+Main Requirement (FFmpeg Setup):-
+1) The system requires FFmpeg for handling audio/video processing during recording and conversion.
+2) FFmpeg is used to convert recorded audio into 16 kHz mono WAV format for model inference.
+3) Download FFmpeg from the official website and extract the folder.
+4) Place the FFmpeg folder in Local Disk (C:) (e.g., C:\ffmpeg).
+5) Add the FFmpeg bin folder to the system Environment Variables (Path).
+6) Example path: C:\ffmpeg\bin
+7) Restart the terminal after setup to ensure FFmpeg is detected.
+8) This enables proper audio recording, conversion, and preprocessing in the system.
+
+Execution Steps:-
+
+Step 1: Install Dependencies
+Open terminal and install required libraries using requirements file
+Command: pip install -r requirements.txt
+
+Step 2: Load the Model
+Ensure the trained model file (SDED_T_Final_Model.pt) is placed in the models project directory
+The model will be automatically loaded when the application starts
+
+Step 3: Run the Application
+Open terminal in project folder
+Run command: python app.py
+Flask server starts on localhost
+
+Step 4: Open Web Interface
+Open browser and go to: http://127.0.0.1:5000
+Home page of the system will be displayed
+
+Step 5: Register / Login
+Create a new account using registration page
+Login using credentials stored in SQLite database
+
+Step 6: Record Speech
+Navigate to voice detection module
+Record audio using microphone
+
+Step 7: Audio Processing
+Audio is captured and converted to 16kHz WAV format using FFmpeg
+Preprocessing is applied before model inference
+
+Step 8: Model Prediction
+Processed audio is passed to SDED-T model
+Model generates prediction (Normal / Abnormal)
+
+Step 9: Output Display
+Result is displayed with confidence score
+Output shown on the web interface
+
+Step 10: Backend Logs
+Console displays logits and softmax probabilities
+Confirms successful inference
+
+Output:-
+Normal → Stable emotional state
+Abnormal → Stress-related emotional state
+Confidence score indicates prediction reliability
+
+Security Features:-
+User authentication using hashed passwords
+Data stored securely in SQLite database
+
+Deployment Note:-
+The system can be deployed locally or on cloud platforms
+Supports real-time speech-based stress detection
+

@@ -1,0 +1,20 @@
+# Core web framework
+flask==3.0.3
+
+# Authentication & hashing
+werkzeug==3.0.6
+
+# Database (SQLite support is built-in, but we use it via python)
+# No extra package needed for sqlite3
+
+# PyTorch & audio/ML dependencies
+torch==2.4.1
+torchaudio==2.4.1
+transformers==4.44.2          # for Wav2Vec2Model & feature extractor
+
+# Audio processing
+soundfile==0.13.1
+pydub==0.25.1
+
+# Optional but recommended (helps with numpy arrays in audio)
+numpy==1.24.4                 # compatible with Python 3.8 & torch 2.4
