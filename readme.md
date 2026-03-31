@@ -81,6 +81,7 @@ EMOTION_NOVELTY_APP/
 ├── database.db
 ├── README.md
 └── requirements.txt
+'''
 
 ## ⚙️ System Requirements
 1) Python 3.8 or above
