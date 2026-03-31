@@ -50,6 +50,7 @@ These results demonstrate improved reliability and performance for stress detect
 
 ## 🏗️ Project Structure
 
+```plaintext
 EMOTION_NOVELTY_APP/
 │
 ├── AI Training Code, Dataset, Requirements and Execution Steps/
@@ -63,7 +64,7 @@ EMOTION_NOVELTY_APP/
 │   └── Requirements and Execution Steps.txt
 │
 ├── models/
-│   └── Model Download Drive link.txt
+│   └── (Download model from Drive)
 │
 ├── static/
 │   └── js/
